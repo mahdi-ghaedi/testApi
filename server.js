@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 
-// روت ساده
+const port = process.env.PORT || 8080;
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Subscribe to Arpan Neupane's channel");
 });
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(port, () => {
+  `Server started on port ${port}`;
 });
